@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/* universal selector */
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif ;
+}
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+/* container */
+.container{
+    position: relative;
+    display: flex;
+    gap:20px;
+}
+/* card */
+.container .card{
+    position: relative;
+    width:300px;
+    height:400px;
+}
+/* box */
+.container .card .imgbx{
+    position: absolute;
+    inset: 0;
+    background: #222;
+    border-radius: 20px;
+}
+/* image */
+.container .card .imgbx img{
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 20px;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: 0.5s;   
+}
+/* hover effect */
+.container .card:hover .imgbx img{
+    opacity: 0;
+}
+/* 3d cards */
+.container .card .c3d{
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.5s;
+    transform:translateY(0);
+}
+/* 3dcars hover effect */
+.container .card:hover .c3d{
+    opacity: 1;
+    transform:translateY(-25%);
+}
+/* heading */
+.card h2{
+    position: absolute;
+    bottom: 10px;
+    left: 60%;
+    transform: translateX(-35%);
+    color:white;
+    font-size: 1.75em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    background-color: var(--clr);
+    width:80%;
+    text-align: center;
+    padding:5px 20px;
+    border-radius: 20px;
+    opacity:0;
+}
+.card:hover h2{
+    bottom: 30px;
+    opacity:1;
+
+}
